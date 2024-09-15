@@ -1,7 +1,7 @@
 ---
 title: "Sleeping Beauties: Reawakening Fashion"
 link: "https://www.youtube.com/watch?v=q2bOFdvcLEc"
-img: /assets/images/image_01.jpg
+img: /assets/images/sleeping_beauties.jpg
 sortOrder: 2
 reverse: true
 classList:

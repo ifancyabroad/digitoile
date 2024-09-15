@@ -1,7 +1,7 @@
 ---
 title: "The Future Fashion Factory"
 link: "https://futurefashionfactory.org/funded-projects/digitoile/"
-img: /assets/images/image_01.jpg
+img: /assets/images/future.jpg
 sortOrder: 3
 reverse: false
 classList:
