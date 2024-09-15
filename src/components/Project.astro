@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArrowRight from "/assets/images/arrow_right.svg?raw";
+
+interface Props {
+	project: CollectionEntry<"work">;
+}
+
+const { data, render } = Astro.props.project;
+const { Content } = await render();
+---
+
+<div class="flex flex-col md:flex-row">
+	<div
+		class:list={[
+			"md:w-1/2",
+			data.reverse ? "md:order-last" : "md:order-first",
+		]}
+	>
+		<img src={data.img} alt={data.title} />
+	</div>
+	<div
+		class:list={data.classList.concat([
+			"md:w-1/2",
+			"p-10",
+			"flex",
+			"flex-col",
+			"justify-between",
+			"gap-5",
+		])}
+	>
+		<h2 class="text-[46px] leading-[46px] md:text-[65px] md:leading-[65px]">
+			{data.title}
+		</h2>
+
+		<div>
+			<div class="text-lg md:text-xl mb-10 [&>p]:mb-8">
+				<Content />
+			</div>
+			<a
+				href={data.link}
+				class="font-medium flex gap-2 transition-opacity hover:opacity-70"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				VIEW MORE
+
+				<Fragment set:html={ArrowRight} />
+			</a>
+		</div>
+	</div>
+</div>
